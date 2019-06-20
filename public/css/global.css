@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  color: #636e72;
+  background-color: #2f3542;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
