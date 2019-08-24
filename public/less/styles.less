@@ -1,48 +1,78 @@
-a {
-  width: calc(50% - 5em)
+/* === VARIABLES === */
+@black: #2d3436;
+@lightblue: #dfe6e9;
+@white: #f3f1ef;
+@gray: #636e72;
+
+/* === Background === */
+.bg-container {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+    opacity: 0.8;
+    z-index: -1;
+  }
 }
 
+/* === PAGE === */
 .page-container {
   max-width: 768px;
-  box-shadow: 15px 15px #636e72;
+  width: 100%;
+  box-shadow: 15px 15px @lightblue;
   margin: 12px auto;
   padding: 12px 0px;
-  background-color: #dfe6e9;
+  background-color: @black;
+  position: relative;
+  z-index: 1;
+  outline: 1px solid @black;
 }
 
 /* === HEADER === */
 header {
+  box-sizing: border-box;
   height: 128px;
   display: flex;
-  max-width: 768px;
   width: 100%;
-  margin: 18px auto 48px;
   line-height: 128px;
   text-align: bottom;
-  padding: 12px 24px;
-  background-color: #dfe6e9;
+  padding: 12px 24px 12px 12px;
+  color: @lightblue;
 
   img {
     height: 100%;
-    background-color: #dfe6e9;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+    padding: 0px 12px;
   }
 }
 
 .nav-title {
   font-size: 36px;
-  color: #0984e3;
-  background-color: #dfe6e9;
+  width: 100%;
 }
 
 .nav-login {
   flex: 1;
   text-align: right;
-  font-size: 20px;
-  background-color: #dfe6e9;
 }
 
 /* === MAIN === */
-
 .container {
   display: flex;
   margin: 18px auto 48px;
@@ -51,54 +81,61 @@ header {
   text-align: center;
   max-width: 768px;
   width: 100%;
-  background-color: #dfe6e9;
 }
 
 .main-heading {
-  background-color: #dfe6e9;
+  color: @lightblue;
+
+  h1 {
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+
+  div {
+    margin-bottom: 48px;
+  }
 }
 
-.main-heading h1 {
-  font-size: 48px;
-  margin-bottom: 24px;
-  color: #0984e3;
-  background-color: #dfe6e9;
-}
-
-.main-heading div {
-  margin-bottom: 48px;
-  background-color: #dfe6e9;
-}
-
+/* === OVERVIEW === */
 .overview {
-  background-color: #f3f1ef;
+  background-color: @white;
   padding: 12px 24px;
   margin-bottom: 24px;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
 }
 
-.overview div {
-  background-color: #f3f1ef;
-}
-.overview h1 {
-  font-size: 24px;
-  margin-bottom: 12px;
-  background-color: #f3f1ef;
-}
-
+/* === SIGN UP === */
 .signup button {
   height: 42px;
   width: 164px;
   font-weight: 700;
-  color: #636e72;
+  color: @black;
   border: 2px solid #2d3436;
-  background-color: #dfe6e9;
+  background-color: @lightblue;
   outline: none;
 
+  &:hover {
+    background-color: @gray;
+    color: @white;
+  }
 }
 
-.signup button:hover {
-  background-color: #b2bec3;
-  color: #ffffff;
+/* === LESSON === */
+
+.lesson-container {
+  color: @white;
+  text-align: left;
+  padding: 12px;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+  }
 }
 
 /* === RESPONSIVE STYLES === */
